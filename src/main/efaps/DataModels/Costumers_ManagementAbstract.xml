@@ -20,23 +20,13 @@
  Last Changed By: $Author$
 
 --><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>5ea53443-dc61-4ef6-b969-f57be5791724</uuid>
+    <uuid>e007f7da-5f97-4ed2-9bbb-50795e5e9320</uuid>
     <file-application>eFapsApp-Costumers</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_Oportunity</name>
-        <parent>Costumers_ManagementAbstract</parent>
-        <attribute>
-            <name>Status</name>
-            <type>Status</type>
-            <typelink>Costumers_OportunityStatus</typelink>
-            <sqltable>ERP_DocumentAbstractSQLTable</sqltable>
-            <sqlcolumn>STATUS</sqlcolumn>
-            <trigger program="org.efaps.esjp.admin.datamodel.StatusValue"
-                name="Costumers_Oportunity.Status.RANGE_VALUE"
-                event="RANGE_VALUE">
-            </trigger>
-        </attribute>
+        <name>Costumers_ManagementAbstract</name>
+        <parent>ERP_DocumentAbstract</parent>
+        <purpose abstract="true"/>
     </definition>
 </datamodel-type>

@@ -26,12 +26,12 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Costumers_Lead</name>
-        <parent>Costumers_AbstractManagement</parent>
+        <parent>Costumers_ManagementAbstract</parent>
         <attribute>
             <name>Status</name>
             <type>Status</type>
             <typelink>Costumers_LeadStatus</typelink>
-            <sqltable>Costumers_ManagementSQLTable</sqltable>
+            <sqltable>ERP_DocumentAbstractSQLTable</sqltable>
             <sqlcolumn>STATUS</sqlcolumn>
             <trigger program="org.efaps.esjp.admin.datamodel.StatusValue"
                 name="Costumers_Lead.Status.RANGE_VALUE"
