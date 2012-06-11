@@ -45,6 +45,30 @@
             <sqlcolumn>ID</sqlcolumn>
         </attribute>
         <attribute>
+            <name>Company</name>
+            <type>CompanyLink</type>
+            <sqltable>Costumers_ManagementSQLTable</sqltable>
+            <sqlcolumn>COMPANYID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>Contact</name>
+            <type>Link</type>
+            <typelink>Contacts_Contact</typelink>
+            <sqltable>Costumers_ManagementSQLTable</sqltable>
+            <sqlcolumn>CONTACTID</sqlcolumn>
+        </attribute>
+        <attribute>
+            <name>StatusAbstract</name>
+            <type>Status</type>
+            <typelink>Admin_DataModel_StatusAbstract</typelink>
+            <sqltable>Costumers_ManagementSQLTable</sqltable>
+            <sqlcolumn>STATUS</sqlcolumn>
+            <trigger program="org.efaps.esjp.admin.datamodel.StatusValue"
+                    name="Costumers_AbstractManagement.Status.RANGE_VALUE"
+                    event="RANGE_VALUE">
+            </trigger>
+        </attribute>
+        <attribute>
             <name>Creator</name>
             <type>CreatorLink</type>
             <sqltable>Costumers_ManagementSQLTable</sqltable>

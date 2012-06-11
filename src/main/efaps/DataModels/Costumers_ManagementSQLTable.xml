@@ -28,16 +28,21 @@
         <name>Costumers_ManagementSQLTable</name>
         <typeid-column>TYPEID</typeid-column>
         <database>
-            <table-name>T_COMAN</table-name>
+            <table-name>T_CRMAN</table-name>
             <!-- columns -->
-            <column name="TYPEID"   not-null="true" type="INTEGER"/>
-            <column name="CREATOR"  not-null="true" type="INTEGER"/>
-            <column name="CREATED"  not-null="true" type="DATETIME"/>
-            <column name="MODIFIER" not-null="true" type="INTEGER"/>
-            <column name="MODIFIED" not-null="true" type="DATETIME"/>
+            <column name="TYPEID"       not-null="true" type="INTEGER"/>
+            <column name="COMPANYID"    not-null="true" type="INTEGER"/>
+            <column name="CONTACTID"    not-null="true" type="INTEGER"/>
+            <column name="STATUS"       not-null="true" type="INTEGER"/>
+            <column name="CREATOR"      not-null="true" type="INTEGER"/>
+            <column name="CREATED"      not-null="true" type="DATETIME"/>
+            <column name="MODIFIER"     not-null="true" type="INTEGER"/>
+            <column name="MODIFIED"     not-null="true" type="DATETIME"/>
             <!-- constrains -->
-            <foreign key="CREATOR" name="T_COMAN_FK_CRTR" reference="T_USERPERSON(ID)"/>
-            <foreign key="MODIFIER" name="T_COMAN_FK_MDFR" reference="T_USERPERSON(ID)"/>
+            <foreign key="COMPANYID"    name="T_COMAN_FK_COMPANYID"     reference="T_USERABSTRACT(ID)" />
+            <foreign key="CONTACTID"    name="T_COMAN_FK_CONTACTID"     reference="T_COCONTACT(ID)" />
+            <foreign key="CREATOR"      name="T_COMAN_FK_CRTR"          reference="T_USERPERSON(ID)"/>
+            <foreign key="MODIFIER"     name="T_COMAN_FK_MDFR"          reference="T_USERPERSON(ID)"/>
         </database>
     </definition>
 </datamodel-sqltable>
