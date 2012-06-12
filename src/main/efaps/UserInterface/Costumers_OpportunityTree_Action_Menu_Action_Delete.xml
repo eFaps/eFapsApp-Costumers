@@ -19,15 +19,24 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
---><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>f0b19d79-4d89-4b7b-b50e-af0f3e17bb0a</uuid>
+--><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+
+    <uuid>5ad962aa-df36-47d9-ba7a-b45fe4584005</uuid>
     <file-application>eFapsApp-Costumers</file-application>
     <file-revision>$Rev$</file-revision>
+
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_MyDesk</name>
-        <childs>
-            <child>Costumers_OpportunitiesMyDesk</child>
-        </childs>
+        <name>Costumers_OpportunityTree_Action_Menu_Action_Delete</name>
+        <access>
+            <role>Costumers_Admin</role>
+        </access>
+        <!-- target definitions -->
+        <target>
+            <execute program="org.efaps.esjp.common.uitable.CommonDelete" />
+        </target>
+        <!-- properties -->
+        <property name="AskUser">true</property>
+        <property name="Submit">true</property>
     </definition>
-</ui-menu>
+</ui-command>

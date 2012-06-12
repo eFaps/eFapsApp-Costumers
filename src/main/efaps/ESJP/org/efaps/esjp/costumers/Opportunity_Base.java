@@ -40,7 +40,7 @@ import org.efaps.util.EFapsException;
  */
 @EFapsUUID("a64ca997-3c47-4bb2-ab02-06bef4cbe349")
 @EFapsRevision("$Rev$")
-public abstract class Oportunity_Base
+public abstract class Opportunity_Base
     extends CommonDocument
 {
 
@@ -68,18 +68,18 @@ public abstract class Oportunity_Base
     protected Instance createDoc(final Parameter _parameter)
         throws EFapsException
     {
-        final String date = _parameter.getParameterValue(CIFormCostumers.Costumers_OportunityForm.date.name);
+        final String date = _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.date.name);
         final Long contactid = Instance.get(
-                        _parameter.getParameterValue(CIFormCostumers.Costumers_OportunityForm.contact.name)).getId();
+                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.contact.name)).getId();
 
-        final Insert insert = new Insert(CICostumers.Oportunity);
-        insert.add(CICostumers.Oportunity.Contact, contactid);
-        insert.add(CICostumers.Oportunity.Date, date);
-        insert.add(CICostumers.Oportunity.Salesperson,
-                        _parameter.getParameterValue(CIFormCostumers.Costumers_OportunityForm.salesperson.name));
-        insert.add(CICostumers.Oportunity.Name,
-                        _parameter.getParameterValue(CIFormCostumers.Costumers_OportunityForm.name4create.name));
-        insert.add(CICostumers.Oportunity.Status, Status.find(CICostumers.OportunityStatus.uuid, "Open").getId());
+        final Insert insert = new Insert(CICostumers.Opportunity);
+        insert.add(CICostumers.Opportunity.Contact, contactid);
+        insert.add(CICostumers.Opportunity.Date, date);
+        insert.add(CICostumers.Opportunity.Salesperson,
+                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.salesperson.name));
+        insert.add(CICostumers.Opportunity.Name,
+                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.name4create.name));
+        insert.add(CICostumers.Opportunity.Status, Status.find(CICostumers.OpportunityStatus.uuid, "Open").getId());
         insert.execute();
         return insert.getInstance();
     }

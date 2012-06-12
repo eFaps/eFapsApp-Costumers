@@ -19,27 +19,24 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
---><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>3b4bc387-75d9-48b0-9223-3db3a8de361a</uuid>
+--><datamodel-type xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>5ea53443-dc61-4ef6-b969-f57be5791724</uuid>
     <file-application>eFapsApp-Costumers</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_OportunityTree</name>
-        <!-- access and targets -->
-        <access>
-            <role>Costumers_Reader</role>
-            <role>Costumers_Modifier</role>
-            <role>Costumers_Admin</role>
-        </access>
-        <target>
-            <menu>Costumers_OportunityTree_Menu</menu>
-            <form>Costumers_OportunityForm</form>
-        </target>
-        <!-- type tree for -->
-        <type>Costumers_Oportunity</type>
-        <!-- properties -->
-        <property name="Target">content</property>
-        <property name="TargetMode">view</property>
+        <name>Costumers_Opportunity</name>
+        <parent>Costumers_ManagementAbstract</parent>
+        <attribute>
+            <name>Status</name>
+            <type>Status</type>
+            <typelink>Costumers_OpportunityStatus</typelink>
+            <sqltable>ERP_DocumentAbstractSQLTable</sqltable>
+            <sqlcolumn>STATUS</sqlcolumn>
+            <trigger program="org.efaps.esjp.admin.datamodel.StatusValue"
+                name="Costumers_Oportunity.Status.RANGE_VALUE"
+                event="RANGE_VALUE">
+            </trigger>
+        </attribute>
     </definition>
-</ui-menu>
+</datamodel-type>

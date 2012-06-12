@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2010 The eFaps Team
+ Copyright 2003 - 2012 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -20,23 +20,26 @@
  Last Changed By: $Author$
 
 --><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>68e3de3d-5d76-4cfa-b2e1-fcc38e61a0cf</uuid>
+
+    <uuid>b056cc1c-8510-40fb-a0a4-5982f0ba5463</uuid>
     <file-application>eFapsApp-Costumers</file-application>
     <file-revision>$Rev$</file-revision>
+
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_OportunityTree_Menu_Action_Edit</name>
-        <!-- access and target definitions -->
-        <access>
-            <role>Costumers_Admin</role>
-            <role>Costumers_Modifier</role>
-        </access>
+        <name>Costumers_OpportunityTree_Action_Menu_Action_Create</name>
+
+        <!-- target definitions -->
         <target>
-            <form>Costumers_OportunityForm</form>
-            <execute program="org.efaps.esjp.common.uiform.Edit"/>
+            <form>Costumers_ActionOpportunityForm</form>
+            <execute method="execute" program="org.efaps.esjp.common.uiform.Create" />
         </target>
         <!-- properties -->
         <property name="Target">modal</property>
-        <property name="TargetMode">edit</property>
+        <property name="TargetCreateType">Costumers_ActionOpportunity</property>
+        <property name="TargetConnectAttribute">Costumers_ActionOpportunity/OpportunityLink</property>
+        <property name="TargetMode">create</property>
+        <property name="WindowHeight">460</property>
+        <property name="WindowWidth">720</property>
     </definition>
 </ui-command>

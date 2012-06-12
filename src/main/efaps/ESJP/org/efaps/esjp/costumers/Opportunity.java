@@ -35,8 +35,8 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  */
 @EFapsUUID("61887216-9209-4b1f-847a-308ed93030e6")
 @EFapsRevision("$Rev$")
-public class Oportunity
-    extends Oportunity_Base
+public class Opportunity
+    extends Opportunity_Base
 {
 
 }

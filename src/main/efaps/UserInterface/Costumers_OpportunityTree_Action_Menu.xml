@@ -20,14 +20,17 @@
  Last Changed By: $Author$
 
 --><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>f0b19d79-4d89-4b7b-b50e-af0f3e17bb0a</uuid>
+
+    <uuid>dececb15-3d91-4185-8cdf-9dc5e9b86252</uuid>
     <file-application>eFapsApp-Costumers</file-application>
     <file-revision>$Rev$</file-revision>
+
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_MyDesk</name>
+        <name>Costumers_OpportunityTree_Action_Menu</name>
+        <!-- childs -->
         <childs>
-            <child>Costumers_OpportunitiesMyDesk</child>
+            <child>Costumers_OpportunityTree_Action_Menu_Action</child>
         </childs>
     </definition>
 </ui-menu>

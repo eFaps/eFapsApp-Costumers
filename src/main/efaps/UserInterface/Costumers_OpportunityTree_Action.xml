@@ -19,15 +19,24 @@
  Last Changed:    $Date$
  Last Changed By: $Author$
 
---><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>f0b19d79-4d89-4b7b-b50e-af0f3e17bb0a</uuid>
+--><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+
+    <uuid>15f809d8-57c3-43cf-8aec-183d0bfef0e3</uuid>
     <file-application>eFapsApp-Costumers</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_MyDesk</name>
-        <childs>
-            <child>Costumers_OpportunitiesMyDesk</child>
-        </childs>
+        <name>Costumers_OpportunityTree_Action</name>
+        <target>
+            <menu>Costumers_OpportunityTree_Action_Menu</menu>
+            <table>Costumers_ActionTable</table>
+            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
+                <property name="Types">Costumers_ActionOpportunity</property>
+                <property name="LinkFroms">OpportunityLink</property>
+            </evaluate>
+        </target>
+        <!-- properties -->
+        <property name="Target">content</property>
+        <property name="TargetShowCheckBoxes">true</property>
     </definition>
-</ui-menu>
+</ui-command>

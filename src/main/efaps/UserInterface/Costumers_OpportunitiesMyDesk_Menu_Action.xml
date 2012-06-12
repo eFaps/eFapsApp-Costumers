@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2011 The eFaps Team
+ Copyright 2003 - 2012 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -20,28 +20,16 @@
  Last Changed By: $Author$
 
 --><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>346bc3a9-358c-417b-8285-fa64bcb874fc</uuid>
+    <uuid>63effc59-1468-4f19-80f2-98bdff00c0c1</uuid>
     <file-application>eFapsApp-Costumers</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_OportunitiesMyDesk</name>
-        <access>
-            <role>Costumers_Reader</role>
-            <role>Costumers_Modifier</role>
-            <role>Costumers_Admin</role>
-        </access>
-        <target>
-            <menu>Costumers_OportunitiesMyDesk_Menu</menu>
-            <table>Costumers_ManagementAbstractTable</table>
-            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Costumers_Oportunity</property>
-                <property name="ExpandChildTypes">true</property>
-            </evaluate>
-        </target>
-
-        <!-- properties -->
-        <property name="Target">content</property>
-        <property name="TargetShowCheckBoxes">true</property>
+        <name>Costumers_OpportunitiesMyDesk_Menu_Action</name>
+        <!-- childs -->
+        <childs>
+            <child>Costumers_OpportunitiesMyDesk_Menu_Action_CreateOpportunity</child>
+            <child>Costumers_OpportunitiesMyDesk_Menu_Action_Delete</child>
+        </childs>
     </definition>
 </ui-menu>
