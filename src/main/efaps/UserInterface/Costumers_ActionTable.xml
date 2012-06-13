@@ -30,6 +30,7 @@
         <name>Costumers_ActionTable</name>
         <!-- fields -->
         <field name="abstractDefinitionLink">
+            <property name="FilterType">PICKER</property>
             <property name="Select">linkto[AbstractDefinitionLink].attribute[Value]</property>
             <property name="Label">Costumers_ActionAbstract/AbstractDefinitionLink.Label</property>
         </field>
@@ -39,10 +40,6 @@
             <property name="Label">Costumers_ActionAbstract/Name.Label</property>
         </field>
         <field name="date">
-            <property name="FilterType">FREETEXT</property>
-            <property name="FilterRequired">TRUE</property>
-            <property name="FilterBase">DATABASE</property>
-            <property name="FilterDefault">WEEK</property>
             <property name="Attribute">Date</property>
             <property name="Label">Costumers_ActionAbstract/Date.Label</property>
         </field>
