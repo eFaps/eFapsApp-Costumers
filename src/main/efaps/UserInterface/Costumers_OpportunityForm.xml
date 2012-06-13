@@ -115,7 +115,7 @@
             <property name="ModeEdit">READONLY</property>
             <property name="ModeView">READONLY</property>
         </field>
-                <field name="headingClient" character="Heading">
+            <field name="headingClient" character="Heading">
             <property name="Level">2</property>
             <property name="Label">Costumers_OpportunityForm.headingClient.Heading</property>
             <property name="ModeCreate">EDITABLE</property>
@@ -146,6 +146,26 @@
             <property name="ModeView">NONE</property>
             <property name="ModeCreate">READONLY</property>
             <property name="ClassNameUI">org.efaps.admin.datamodel.ui.StringUI</property>
+        </field>
+         <field character="Group" name="revenueGroup">
+            <property name="GroupCount">2</property>
+        </field>
+        <field name="revenue">
+            <property name="Attribute">Revenue</property>
+            <property name="Columns">9</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+        <field name="currencyLink">
+            <property name="Attribute">CurrencyLink</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+         <field name="probability">
+            <property name="Attribute">Probability</property>
+            <property name="Columns">9</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
         </field>
     </definition>
 </ui-form>

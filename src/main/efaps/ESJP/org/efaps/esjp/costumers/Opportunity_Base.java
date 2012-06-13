@@ -80,6 +80,12 @@ public abstract class Opportunity_Base
         insert.add(CICostumers.Opportunity.Name,
                         _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.name4create.name));
         insert.add(CICostumers.Opportunity.Status, Status.find(CICostumers.OpportunityStatus.uuid, "Open").getId());
+        insert.add(CICostumers.Opportunity.Revenue,
+                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.revenue.name));
+        insert.add(CICostumers.Opportunity.CurrencyLink,
+                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.currencyLink.name));
+        insert.add(CICostumers.Opportunity.Probability,
+                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.probability.name));
         insert.execute();
         return insert.getInstance();
     }
