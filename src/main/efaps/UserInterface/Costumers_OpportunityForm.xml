@@ -174,5 +174,18 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
         </field>
+        <field name="headingNote" character="Heading">
+            <property name="Level">3</property>
+            <property name="Label">Costumers_OpportunityForm.headingNote.Heading</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
+        <field name="note">
+            <property name="Attribute">Note</property>
+            <property name="Columns">80</property>
+            <property name="HideLabel">true</property>
+            <property name="Rows">5</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeCreate">EDITABLE</property>
+        </field>
     </definition>
 </ui-form>

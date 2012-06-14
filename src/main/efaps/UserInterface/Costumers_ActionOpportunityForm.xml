@@ -45,7 +45,7 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="Attribute">Date</property>
         </field>
-         <field name="description">
+        <field name="description">
             <property name="Columns">80</property>
             <property name="Rows">5</property>
             <property name="ModeCreate">EDITABLE</property>
