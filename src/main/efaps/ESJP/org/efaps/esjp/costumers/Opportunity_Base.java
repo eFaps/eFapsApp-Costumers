@@ -86,6 +86,8 @@ public abstract class Opportunity_Base
                         _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.currencyLink.name));
         insert.add(CICostumers.Opportunity.Probability,
                         _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.probability.name));
+        insert.add(CICostumers.Opportunity.Note,
+                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.note.name));
         insert.execute();
         return insert.getInstance();
     }
