@@ -104,18 +104,29 @@
         </field>
         <field name="name">
             <property name="Attribute">Name</property>
-            <property name="Columns">15</property>
+            <property name="Columns">60</property>
             <property name="ModeEdit">EDITABLE</property>
             <property name="Required">true</property>
         </field>
         <field name="status">
-            <property name="Attribute">Status</property>
-            <property name="ModeCreate">NONE</property>
             <property name="Columns">15</property>
-            <property name="ModeEdit">READONLY</property>
+            <property name="Attribute">Status</property>
+            <property name="ModeEdit">NONE</property>
             <property name="ModeView">READONLY</property>
         </field>
-            <field name="headingClient" character="Heading">
+        <field name="status4edit">
+            <property name="Columns">15</property>
+            <property name="Attribute">Status</property>
+            <property name="ModeEdit">EDITABLE</property>
+            <property name="ModeView">NONE</property>
+             <trigger program="org.efaps.esjp.admin.access.AccessOnField"
+                method="roleCheck"
+                name="Costumers_OpportunityForm.status4edit.UI_ACCESSCHECK"
+                event="UI_ACCESSCHECK" >
+                <property name="Roles">Costumers_Modifier;Costumers_Admin</property>
+            </trigger>
+        </field>
+        <field name="headingClient" character="Heading">
             <property name="Level">2</property>
             <property name="Label">Costumers_OpportunityForm.headingClient.Heading</property>
             <property name="ModeCreate">EDITABLE</property>
