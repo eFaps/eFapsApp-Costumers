@@ -198,5 +198,17 @@
             <property name="ModeEdit">EDITABLE</property>
             <property name="ModeCreate">EDITABLE</property>
         </field>
+        <field name="headingAction" character="Heading">
+            <property name="Level">3</property>
+            <property name="Label">Costumers_OpportunityForm.headingAction.Heading</property>
+        </field>
+        <field character="Target" name="actionTable">
+            <property name="ModeEdit">NONE</property>
+            <table>Costumers_ActionTable</table>
+            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
+                <property name="Types">Costumers_ActionOpportunity</property>
+                <property name="LinkFroms">OpportunityLink</property>
+            </evaluate>
+        </field>
     </definition>
 </ui-form>
