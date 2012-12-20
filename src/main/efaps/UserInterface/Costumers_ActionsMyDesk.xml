@@ -20,15 +20,27 @@
  Last Changed By: $Author$
 
 --><ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>f0b19d79-4d89-4b7b-b50e-af0f3e17bb0a</uuid>
+    <uuid>79475265-78a5-4965-875d-8229a2645052</uuid>
     <file-application>eFapsApp-Costumers</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_MyDesk</name>
-        <childs>
-            <child>Costumers_OpportunitiesMyDesk</child>
-            <child>Costumers_ActionsMyDesk</child>
-        </childs>
+        <name>Costumers_ActionsMyDesk</name>
+        <access>
+            <role>Costumers_Reader</role>
+            <role>Costumers_Modifier</role>
+            <role>Costumers_Admin</role>
+        </access>
+        <target>
+            <table>Costumers_ActionsMyDesk_Table</table>
+            <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
+                <property name="Types">Costumers_ActionAbstract</property>
+                <property name="ExpandChildTypes">true</property>
+            </evaluate>
+        </target>
+        <!-- properties -->
+        <property name="Target">content</property>
+        <property name="TargetShowCheckBoxes">true</property>
+        <property name="TargetTableSortKey">date</property>
     </definition>
 </ui-menu>
