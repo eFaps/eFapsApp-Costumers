@@ -30,7 +30,7 @@
         <name>Costumers_ActionTable</name>
         <!-- fields -->
         <field name="abstractDefinitionLink">
-            <property name="FilterType">PICKER</property>
+            <property name="FilterType">PICKLIST</property>
             <property name="Select">linkto[AbstractDefinitionLink].attribute[Value]</property>
             <property name="Label">Costumers_ActionAbstract/AbstractDefinitionLink.Label</property>
         </field>

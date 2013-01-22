@@ -57,7 +57,7 @@
             <property name="Label">Costumers_ManagementAbstract/Contact.Label</property>
         </field>
         <field name="status">
-            <property name="FilterType">PICKER</property>
+            <property name="FilterType">PICKLIST</property>
             <property name="Attribute">StatusAbstract</property>
             <property name="Label">Costumers_ManagementAbstract/Status.Label</property>
         </field>
