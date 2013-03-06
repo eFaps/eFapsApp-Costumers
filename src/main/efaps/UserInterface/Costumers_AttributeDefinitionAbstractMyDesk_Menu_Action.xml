@@ -20,24 +20,15 @@
  Last Changed By: $Author$
 
 -->
-<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>4fb3a768-589d-4faa-a495-5507a67c3231</uuid>
+<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+    <uuid>213161b2-1ebe-4ddc-95c1-e1ac2f78a5b5</uuid>
     <file-application>eFapsApp-Costumers</file-application>
     <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateOpportunityAction</name>
-        <!-- target definitions -->
-        <access>
-            <role>Costumers_Admin</role>
-        </access>
-        <target>
-            <form>ERP_AttributeDefinitionForm</form>
-            <execute program="org.efaps.esjp.common.uiform.Create"/>
-        </target>
-        <!-- properties -->
-        <property name="Target">modal</property>
-        <property name="TargetCreateType">Costumers_AttributeDefinitionOpportunityAction</property>
-        <property name="TargetMode">create</property>
+        <name>Costumers_AttributeDefinitionAbstractMyDesk_Menu_Action</name>
+        <childs>
+            <child>Costumers_AttributeDefinitionAbstractMyDesk_Menu_Action_CreateOpportunityAction</child>
+        </childs>
     </definition>
-</ui-command>
+</ui-menu>
