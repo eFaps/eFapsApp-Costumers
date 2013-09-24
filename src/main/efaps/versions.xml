@@ -80,7 +80,7 @@
             }
             UIUpdate update = new UIUpdate();
             <!-- connect the Costumers_MyDesk Menu to the main menu from efaps -->
-            update.add2Menu("f0b19d79-4d89-4b7b-b50e-af0f3e17bb0a", "87001cc3-c45c-44de-b8f1-776df507f268", 1);
+            update.add2Menu("f0b19d79-4d89-4b7b-b50e-af0f3e17bb0a", "87001cc3-c45c-44de-b8f1-776df507f268", 2);
 
              <!-- Costumers_AttributeDefinitionAbstractMyDesk_Menu_Action, ERP_AttributeDefinitionMyDesk_Menu-->
             update.add2Menu("213161b2-1ebe-4ddc-95c1-e1ac2f78a5b5", "69e0b34a-2483-4662-9a45-1ce5d4e420e6", -1);
