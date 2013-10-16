@@ -59,25 +59,12 @@
             import org.efaps.db.QueryBuilder;
             import org.efaps.db.InstanceQuery;
             import org.efaps.esjp.admin.ui.UIUpdate;
-            import org.efaps.importer.DataImport;
-
+            
             import java.net.URL
             import java.io.File;
 
             EFAPS_LOGGER.info("Importing Data for eFapsApp-Costumers");
-            //Admin_User_JAASKey
-            QueryBuilder bldr = new QueryBuilder(UUID.fromString("0e7650c6-8ec3-4c63-b377-f3eb5fb85f16"));
-            bldr.addWhereAttrEqValue("Key", "Costumers_Admin");
-            InstanceQuery query = bldr.getQuery();
-            if (query.execute().isEmpty()) {
-
-                RunLevel.init("shell");
-                RunLevel.execute();
-
-                URL url3 = new URL(EFAPS_ROOTURL, "Data/IMPORT_UserJAASKey.xml");
-                DataImport imp3 = DataImport.readFile(url3);
-                imp3.updateInDB();
-            }
+            
             UIUpdate update = new UIUpdate();
             <!-- connect the Costumers_MyDesk Menu to the main menu from efaps -->
             update.add2Menu("f0b19d79-4d89-4b7b-b50e-af0f3e17bb0a", "87001cc3-c45c-44de-b8f1-776df507f268", 2);
