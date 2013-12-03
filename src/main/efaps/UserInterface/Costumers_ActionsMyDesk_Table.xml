@@ -49,7 +49,7 @@
             <property name="FilterType">FREETEXT</property>
             <property name="FilterRequired">TRUE</property>
             <property name="FilterBase">DATABASE</property>
-            <property name="FilterDefault">WEEK:3</property>
+            <property name="FilterDefault">WEEK:3:4</property>
         </field>
         <field name="description">
             <property name="Attribute">Description</property>
