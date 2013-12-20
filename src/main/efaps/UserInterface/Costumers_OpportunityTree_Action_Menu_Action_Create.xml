@@ -28,6 +28,9 @@
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Costumers_OpportunityTree_Action_Menu_Action_Create</name>
+        <access>
+            <role>Costumers_Admin</role>
+        </access>
 
         <!-- target definitions -->
         <target>
