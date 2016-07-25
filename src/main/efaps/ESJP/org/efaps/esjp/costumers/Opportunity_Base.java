@@ -23,7 +23,7 @@ package org.efaps.esjp.costumers;
 import org.efaps.admin.datamodel.Status;
 import org.efaps.admin.event.Parameter;
 import org.efaps.admin.event.Return;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.db.Insert;
 import org.efaps.db.Instance;
@@ -39,7 +39,7 @@ import org.efaps.util.EFapsException;
  * @version $Id$
  */
 @EFapsUUID("a64ca997-3c47-4bb2-ab02-06bef4cbe349")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Costumers")
 public abstract class Opportunity_Base
     extends CommonDocument
 {

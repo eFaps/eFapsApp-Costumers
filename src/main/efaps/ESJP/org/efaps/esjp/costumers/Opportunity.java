@@ -21,7 +21,7 @@
 
 package org.efaps.esjp.costumers;
 
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
 
@@ -34,7 +34,7 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  * @version $Id$
  */
 @EFapsUUID("61887216-9209-4b1f-847a-308ed93030e6")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Costumers")
 public class Opportunity
     extends Opportunity_Base
 {

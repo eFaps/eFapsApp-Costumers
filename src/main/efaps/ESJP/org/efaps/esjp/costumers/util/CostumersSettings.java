@@ -21,7 +21,7 @@
 
 package org.efaps.esjp.costumers.util;
 
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 
 
@@ -32,7 +32,7 @@ import org.efaps.admin.program.esjp.EFapsUUID;
  * @version $Id$
  */
 @EFapsUUID("7f776f81-e0de-48ee-b88d-01a8ec30c7a0")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Costumers")
 public interface CostumersSettings
 {
 }

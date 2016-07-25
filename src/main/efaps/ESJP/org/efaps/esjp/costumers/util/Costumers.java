@@ -23,7 +23,7 @@ package org.efaps.esjp.costumers.util;
 import java.util.UUID;
 
 import org.efaps.admin.common.SystemConfiguration;
-import org.efaps.admin.program.esjp.EFapsRevision;
+import org.efaps.admin.program.esjp.EFapsApplication;
 import org.efaps.admin.program.esjp.EFapsUUID;
 import org.efaps.util.cache.CacheReloadException;
 
@@ -34,7 +34,7 @@ import org.efaps.util.cache.CacheReloadException;
  * @version $Id$
  */
 @EFapsUUID("325efa96-6e63-487d-90d4-885e60f40091")
-@EFapsRevision("$Rev$")
+@EFapsApplication("eFapsApp-Costumers")
 public final class Costumers
 {
     /**
