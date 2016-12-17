@@ -31,8 +31,8 @@
             <menu>Costumers_OpportunityTree_Action_Menu</menu>
             <table>Costumers_ActionTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Costumers_ActionOpportunity</property>
-                <property name="LinkFroms">OpportunityLink</property>
+                <property name="Type">Costumers_ActionOpportunity</property>
+                <property name="LinkFrom">OpportunityLink</property>
             </evaluate>
         </target>
         <!-- properties -->

@@ -207,8 +207,8 @@
             <property name="ModeEdit">NONE</property>
             <table>Costumers_ActionTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Costumers_ActionOpportunity</property>
-                <property name="LinkFroms">OpportunityLink</property>
+                <property name="Type">Costumers_ActionOpportunity</property>
+                <property name="LinkFrom">OpportunityLink</property>
             </evaluate>
         </field>
     </definition>

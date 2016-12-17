@@ -34,7 +34,7 @@
         <target>
             <table>Costumers_ActionsMyDesk_Table</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Costumers_ActionAbstract</property>
+                <property name="Type">Costumers_ActionAbstract</property>
                 <property name="ExpandChildTypes">true</property>
             </evaluate>
         </target>

@@ -35,7 +35,7 @@
             <menu>Costumers_OpportunitiesMyDesk_Menu</menu>
             <table>Costumers_ManagementAbstractTable</table>
             <evaluate program="org.efaps.esjp.common.uitable.MultiPrint">
-                <property name="Types">Costumers_Opportunity</property>
+                <property name="Type">Costumers_Opportunity</property>
                 <property name="ExpandChildTypes">true</property>
             </evaluate>
         </target>
