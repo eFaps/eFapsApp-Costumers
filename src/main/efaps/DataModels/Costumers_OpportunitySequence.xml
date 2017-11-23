@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
  Copyright 2003 - 2017 The eFaps Team
 
@@ -15,24 +14,15 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
-
 -->
-<datamodel-statusgroup xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<numbergenerator xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>6cda73d5-0f4b-4b85-b910-ffa0fe6f0070</uuid>
+    <uuid>ae9ed6fc-1720-4dea-a718-d6953a57c08f</uuid>
     <file-application>eFapsApp-Costumers</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_OpportunityStatus</name>
-        <parent>Costumers_ManagementStatus</parent>
-        <status key="Open">
-            <description>The Opportunity is worked on.</description>
-        </status>
-        <status key="Closed">
-            <description>The Opportunity was closed/won.</description>
-        </status>
-        <status key="Canceled">
-            <description>The Opportunity was canceled/lost.</description>
-        </status>
+        <name>Costumers_OpportunitySequence</name>
+        <format>Op-%05d</format>
+        <startvalue>1</startvalue>
     </definition>
-</datamodel-statusgroup>
+</numbergenerator>

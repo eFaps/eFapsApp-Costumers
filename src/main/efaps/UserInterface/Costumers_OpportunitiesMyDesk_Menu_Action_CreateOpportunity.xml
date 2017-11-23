@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
 
- Copyright 2003 - 2012 The eFaps Team
+ Copyright 2003 - 2017 The eFaps Team
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,15 +14,11 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 
- Author:          The eFaps Team
- Revision:        $Rev$
- Last Changed:    $Date$
- Last Changed By: $Author$
-
---><ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
+-->
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
     <uuid>23a743c1-5bbd-418e-9f4f-21e1d22a7069</uuid>
     <file-application>eFapsApp-Costumers</file-application>
-    <file-revision>$Rev$</file-revision>
     <definition>
         <version-expression>(version==latest)</version-expression>
         <name>Costumers_OpportunitiesMyDesk_Menu_Action_CreateOpportunity</name>
@@ -30,15 +26,18 @@
             <role>Costumers_Admin</role>
             <role>Costumers_Modifier</role>
         </access>
-        <!-- target definitions -->
         <target>
             <form>Costumers_OpportunityForm</form>
-            <execute method="create" program="org.efaps.esjp.costumers.Opportunity"/>
+            <execute method="create" program="org.efaps.esjp.costumers.Opportunity" >
+                <!-- Costumers-Configuration -->
+                <property name="NumGenSystemConfig">072ab9d0-bcd6-4694-b851-01c755db5a5a</property>
+                <property name="NumGenSystemConfigAttribute">org.efaps.costumers.Opportunity.NumberGenerator</property>
+            </execute>
         </target>
-
-        <!-- properties -->
         <property name="Target">modal</property>
         <property name="TargetCreateType">Costumers_Opportunity</property>
         <property name="TargetMode">create</property>
+        <property name="WindowHeight">700</property>
+        <property name="WindowWidth">900</property>
     </definition>
 </ui-command>

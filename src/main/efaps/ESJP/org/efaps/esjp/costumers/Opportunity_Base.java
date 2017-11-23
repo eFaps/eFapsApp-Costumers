@@ -1,5 +1,5 @@
 /*
- * Copyright 2003 - 2012 The eFaps Team
+ * Copyright 2003 - 2017 The eFaps Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Revision:        $Rev$
- * Last Changed:    $Date$
- * Last Changed By: $Author$
  */
 
 package org.efaps.esjp.costumers;
@@ -36,7 +33,6 @@ import org.efaps.util.EFapsException;
  * TODO comment!
  *
  * @author The eFaps Team
- * @version $Id$
  */
 @EFapsUUID("a64ca997-3c47-4bb2-ab02-06bef4cbe349")
 @EFapsApplication("eFapsApp-Costumers")
@@ -69,27 +65,25 @@ public abstract class Opportunity_Base
         throws EFapsException
     {
         final String date = _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.date.name);
-        final Long contactid = Instance.get(
-                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.contact.name)).getId();
+        final Instance contactInst = Instance.get(_parameter.getParameterValue(
+                        CIFormCostumers.Costumers_OpportunityForm.contact.name));
 
         final Insert insert = new Insert(CICostumers.Opportunity);
-        insert.add(CICostumers.Opportunity.Contact, contactid);
+        insert.add(CICostumers.Opportunity.Contact, contactInst);
         insert.add(CICostumers.Opportunity.Date, date);
-        insert.add(CICostumers.Opportunity.Salesperson,
-                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.salesperson.name));
-        insert.add(CICostumers.Opportunity.Name,
-                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.name4create.name));
-        insert.add(CICostumers.Opportunity.Status, Status.find(CICostumers.OpportunityStatus.uuid, "Open").getId());
-        insert.add(CICostumers.Opportunity.Revenue,
-                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.revenue.name));
-        insert.add(CICostumers.Opportunity.CurrencyLink,
-                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.currencyLink.name));
-        insert.add(CICostumers.Opportunity.Probability,
-                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.probability.name));
-        insert.add(CICostumers.Opportunity.Note,
-                        _parameter.getParameterValue(CIFormCostumers.Costumers_OpportunityForm.note.name));
+        insert.add(CICostumers.Opportunity.Salesperson, _parameter.getParameterValue(
+                        CIFormCostumers.Costumers_OpportunityForm.salesperson.name));
+        insert.add(CICostumers.Opportunity.Name, getDocName4Create(_parameter));
+        insert.add(CICostumers.Opportunity.Status, Status.find(CICostumers.OpportunityStatus.Open));
+        insert.add(CICostumers.Opportunity.Revenue, _parameter.getParameterValue(
+                        CIFormCostumers.Costumers_OpportunityForm.revenue.name));
+        insert.add(CICostumers.Opportunity.CurrencyLink, _parameter.getParameterValue(
+                        CIFormCostumers.Costumers_OpportunityForm.currencyLink.name));
+        insert.add(CICostumers.Opportunity.Probability, _parameter.getParameterValue(
+                        CIFormCostumers.Costumers_OpportunityForm.probability.name));
+        insert.add(CICostumers.Opportunity.Note, _parameter.getParameterValue(
+                        CIFormCostumers.Costumers_OpportunityForm.note.name));
         insert.execute();
         return insert.getInstance();
     }
-
 }
