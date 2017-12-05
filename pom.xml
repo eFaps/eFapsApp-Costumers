@@ -100,9 +100,15 @@
     </distributionManagement>
     <build>
         <plugins>
-            <!--
-                eFaps plugin
-            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>**/ci/CIArchives*.class</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.efaps</groupId>
                 <artifactId>efaps-maven-plugin</artifactId>
