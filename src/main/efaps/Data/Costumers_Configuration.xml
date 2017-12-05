@@ -21,6 +21,6 @@
     <file-application>eFapsApp-Costumers</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_Configuration</name>
+        <name>Costumers-Configuration</name>
     </definition>
 </common-systemconfiguration>

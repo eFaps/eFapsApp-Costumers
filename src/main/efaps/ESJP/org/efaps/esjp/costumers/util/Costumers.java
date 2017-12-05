@@ -59,6 +59,19 @@ public final class Costumers
                     .key(Costumers.BASE + "Opportunity.UseNumberGenerator")
                     .description("Use a NumberGenerator for the Name for Opportunity.");
 
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute OPPORTUNITY_FILESTRBROWSER = new BooleanSysConfAttribute()
+                    .sysConfUUID(Costumers.SYSCONFUUID)
+                    .key(Costumers.BASE + "Opportunity.ActivateFilesStructurBrowser")
+                    .description("Activate the Files StructurBrowser for Opportunity.");
+    /** See description. */
+    @EFapsSysConfAttribute
+    public static final BooleanSysConfAttribute OPPORTUNITY_FILES= new BooleanSysConfAttribute()
+                    .sysConfUUID(Costumers.SYSCONFUUID)
+                    .key(Costumers.BASE + "Opportunity.ActivateFiles")
+                    .description("Activate the Files StructurBrowser for Opportunity.");
+
     /**
      * Singleton.
      */

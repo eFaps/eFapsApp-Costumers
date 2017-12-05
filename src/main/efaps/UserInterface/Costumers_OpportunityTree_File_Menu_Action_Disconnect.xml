@@ -15,27 +15,27 @@
  limitations under the License.
 
 -->
-<ui-menu xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ui-command xmlns="http://www.efaps.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.efaps.org/xsd http://www.efaps.org/xsd/eFaps_1.0.xsd">
-    <uuid>3b4bc387-75d9-48b0-9223-3db3a8de361a</uuid>
+    <uuid>03955cec-b9a7-4a7e-999a-6804a3e37836</uuid>
     <file-application>eFapsApp-Costumers</file-application>
     <definition>
         <version-expression>(version==latest)</version-expression>
-        <name>Costumers_OpportunityTree</name>
+        <name>Costumers_OpportunityTree_File_Menu_Action_Disconnect</name>
         <access>
-            <role>Costumers_Reader</role>
-            <role>Costumers_Modifier</role>
             <role>Costumers_Admin</role>
         </access>
         <target>
-            <menu>Costumers_OpportunityTree_Menu</menu>
-            <form>Costumers_OpportunityForm</form>
+            <execute program="org.efaps.esjp.common.uitable.CommonDelete" />
+            <trigger event="UI_ACCESSCHECK" method="configCheck"
+                name="Costumers_OpportunityTree_File_Menu_Action_Disconnect.UI_ACCESSCHECK"
+                program="org.efaps.esjp.admin.access.AccessCheck4UI">
+                <!-- Costumers-Configuration -->
+                <property name="SystemConfig">072ab9d0-bcd6-4694-b851-01c755db5a5a</property>
+                <property name="Attribute">org.efaps.sales.Opportunity.ActivateFiles</property>
+            </trigger>
         </target>
-        <type>Costumers_Opportunity</type>
-        <childs>
-            <child>Costumers_OpportunityTree_Action</child>
-        </childs>
-        <property name="Target">content</property>
-        <property name="TargetMode">view</property>
+        <property name="AskUser">true</property>
+        <property name="Submit">true</property>
     </definition>
-</ui-menu>
+</ui-command>
